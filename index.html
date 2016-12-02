@@ -16,15 +16,16 @@
             ddd.oncanplay = function() {
                 // setTimeout(function() {
 
-                    ddd.play()
+                    // ddd.play()
                 // }, 100)
                 alert('oncanpladddy')
             }            
             ddd.oncanplaythrough = function() {
                 alert('oncanplaythrough')
             }
-            document.getElementById('bbb').onclick=function() {
-                ddd.load();
+            document.getElementById('bbb').onclick=function(e) {
+                console.log(e)
+                setTimeout(function() {ddd.load()}, 100);
             }
             // ddd.play()
             // ddd.load()
