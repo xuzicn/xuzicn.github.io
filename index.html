@@ -16,23 +16,18 @@
             var ddd = document.getElementById('sss');
             
             document.getElementById('bbb').onclick=function(e) {
-                console.log(e)
-                setTimeout(function() {
-                    ddd.load()
-                }, 100);
+               
+                ddd.load()
                 var audio2 = document.getElementById('audio2');
 
                 ddd.oncanplay = function() {
-                // setTimeout(function() {
-
                     ddd.play()
-                // }, 100)
-                    alert('oncanpladddy')
                 }            
-                ddd.oncanplaythrough = function() {
-                    alert('oncanplaythrough')
-                }
+                // ddd.oncanplaythrough = function() {
+                //     alert('oncanplaythrough')
+                // }
                 ddd.onended = function () {
+                    alert('ended')
                     audio2.load();
                     audio2.oncanplay = function () {
                         audio2.play();
