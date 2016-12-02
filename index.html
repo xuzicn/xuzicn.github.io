@@ -14,7 +14,10 @@
             // document.body.appendChild(ddd)
             var ddd = document.getElementById('sss');
             ddd.oncanplay = function() {
-                // ddd.play()
+                setTimeout(function() {
+
+                ddd.play()
+            }, 100)
                 alert('oncanplay')
             }            
             ddd.oncanplaythrough = function() {
