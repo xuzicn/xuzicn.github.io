@@ -1,1 +1,31 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的</title>
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    </head>
+    <body>
+        <audio src="http://file.gsxservice.com/robot_play/audio/mp3/b5b0b50273f3a2e4614f9b1a68c7c572_49560.mp3" id="sss">您的浏览器不支持 audio 标签。</audio>
+        <button id="bbb" style="display:absolute;z-index:999;">play</button>
+        <script type="text/javascript">
+            // var ddd = document.createElement('audio')
+            // ddd.setAttribute('src', "/img/1.mp3")
+            // document.body.appendChild(ddd)
+            var ddd = document.getElementById('sss');
+            ddd.oncanplay = function() {
+                // ddd.play()
+                alert('oncanplay')
+            }            
+            ddd.oncanplaythrough = function() {
+                alert('oncanplaythrough')
+            }
+            document.getElementById('bbb').onclick=function() {
+                ddd.play();
+            }
+            // ddd.play()
+            // ddd.load()
+        </script>
+    </body>
+</html>
+
